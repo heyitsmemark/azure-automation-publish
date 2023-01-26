@@ -24,3 +24,10 @@ inputs:
 runs:
   using: "docker"
   image: "Dockerfile"
+  
+  args:
+    - ${{ inputs.ClientID }}
+    - ${{ inputs.ClientSecret }}
+    - ${{ inputs.TenantID }}
+    - ${{ inputs.AutomationAccountName }}
+    - ${{ inputs.AutomationAccountResourceGroup }}

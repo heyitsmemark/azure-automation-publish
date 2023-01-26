@@ -2,7 +2,7 @@
 
 set -e
 
-if [ -z "$INPUT_CLIENTID" ]; then
+if [ -z "$CLIENTID" ]; then
   echo "ClientId is not set."
   exit 1
 fi

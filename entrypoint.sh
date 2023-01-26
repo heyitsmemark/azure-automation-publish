@@ -2,27 +2,27 @@
 
 set -e
 
-if [ -z "$CLIENTID" ]; then
+if [ -z "$INPUT_CLIENTID" ]; then
   echo "ClientId is not set."
   exit 1
 fi
 
-if [ ! -z "$INPUT_CLIENTSECRET" ]; then
-  echo "ClientId is not set."
+if [ -z "$INPUT_CLIENTSECRET" ]; then
+  echo "ClientSecret is not set."
   exit 1
 fi
 
-if [ ! -z "$INPUT_TENANTID" ]; then
+if [ -z "$INPUT_TENANTID" ]; then
   echo "TenantId is not set."
   exit 1
 fi
 
-if [ ! -z "$INPUT_AUTOMATIONACCOUNTNAME" ]; then
+if [ -z "$INPUT_AUTOMATIONACCOUNTNAME" ]; then
   echo "AutomationAccountName is not set."
   exit 1
 fi
 
-if [ ! -z "$INPUT_AUTOMATIONACCOUNTRESOURCEGROUP" ]; then
+if [ -z "$INPUT_AUTOMATIONACCOUNTRESOURCEGROUP" ]; then
   echo "AutomationAccountResourceGroup is not set."
   exit 1
 fi

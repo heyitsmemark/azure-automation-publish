@@ -2,7 +2,7 @@
 name: "Azure Automation Publish"
 description: "Publishes azure automation runbooks"
 branding:
-  icon: "search"
+  icon: "code"
   color: "green"
 inputs:
   ClientID:
@@ -24,10 +24,3 @@ inputs:
 runs:
   using: "docker"
   image: "Dockerfile"
-  
-  args:
-    - ${{ inputs.ClientID }}
-    - ${{ inputs.ClientSecret }}
-    - ${{ inputs.TenantID }}
-    - ${{ inputs.AutomationAccountName }}
-    - ${{ inputs.AutomationAccountResourceGroup }}

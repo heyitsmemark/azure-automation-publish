@@ -1,0 +1,26 @@
+# action.yml
+name: "Azure Automation Publish"
+description: "Publishes azure automation runbooks"
+branding:
+  icon: "search"
+  color: "green"
+inputs:
+  ClientID:
+    description: "The Service Principal application ID"
+    required: true
+  ClientSecret:
+    description: "The Service Principal secret"
+    required: true
+  TenantID:
+    description: "The Service Principal tenant ID"
+    required: true
+  AutomationAccountName:
+    description: "The name of the automation account"
+    required: true
+  AutomationAccountResourceGroup:
+    description: "The resource group of the automation account"
+    required: true
+
+runs:
+  using: "docker"
+  image: "Dockerfile"

@@ -27,7 +27,7 @@ if [ -z "$INPUT_AUTOMATIONACCOUNTRESOURCEGROUP" ]; then
   exit 1
 fi
 
-
+az extension add --name automation
 az login --service-principal -u $INPUT_CLIENTID -p $INPUT_CLIENTSECRET --tenant $INPUT_TENANTID
 
 for fullfile in ./*.ps1; do
